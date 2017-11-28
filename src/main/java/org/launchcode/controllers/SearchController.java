@@ -28,7 +28,7 @@ public class SearchController {
                              @RequestParam String searchTerm) {
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<HashMap<String, String>>();
-        if(searchTerm.equals("all")) {
+        if(searchType.equals("all")) {
             jobs = JobData.findByValue(searchTerm);
         } else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
